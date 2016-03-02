@@ -252,7 +252,7 @@ class Twitter
 			CURLOPT_HEADER => FALSE,
 			CURLOPT_RETURNTRANSFER => TRUE,
 		) + ($method === 'POST' ? array(
-			$hasCURLFile ? CURLOPT_SAFE_UPLOAD : -1 => TRUE,
+			//$hasCURLFile ? CURLOPT_SAFE_UPLOAD : -1 => TRUE,
 			CURLOPT_POST => TRUE,
 			CURLOPT_POSTFIELDS => $files ? $data : $request->to_postdata(),
 			CURLOPT_URL => $files ? $request->to_url() : $request->get_normalized_http_url(),
